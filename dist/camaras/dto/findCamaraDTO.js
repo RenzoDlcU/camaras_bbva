@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FindSedeDTO = void 0;
+exports.findCamaraDTO = void 0;
 const class_validator_1 = require("class-validator");
-class FindSedeDTO {
+class findCamaraDTO {
 }
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
-], FindSedeDTO.prototype, "sedeId", void 0);
+], findCamaraDTO.prototype, "sedeId", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.Min)(2),
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", Number)
-], FindSedeDTO.prototype, "aforo", void 0);
-exports.FindSedeDTO = FindSedeDTO;
-//# sourceMappingURL=find-sedes.dto.js.map
+], findCamaraDTO.prototype, "aforo", void 0);
+exports.findCamaraDTO = findCamaraDTO;
+//# sourceMappingURL=findCamaraDTO.js.map

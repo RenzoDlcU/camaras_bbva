@@ -12,28 +12,28 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SedesController = void 0;
+exports.CamarasController = void 0;
 const common_1 = require("@nestjs/common");
-const sedes_service_1 = require("./sedes.service");
-const find_sedes_dto_1 = require("./dto/find-sedes.dto");
-let SedesController = class SedesController {
-    constructor(sedesService) {
-        this.sedesService = sedesService;
+const camaras_service_1 = require("./camaras.service");
+const findCamaraDTO_1 = require("./dto/findCamaraDTO");
+let CamarasController = class CamarasController {
+    constructor(camarasService) {
+        this.camarasService = camarasService;
     }
     findOne(body) {
-        return this.sedesService.findOne(body);
+        return this.camarasService.findOne(body);
     }
 };
 __decorate([
-    (0, common_1.Post)('tickets'),
+    (0, common_1.Post)('slots'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [find_sedes_dto_1.FindSedeDTO]),
+    __metadata("design:paramtypes", [findCamaraDTO_1.findCamaraDTO]),
     __metadata("design:returntype", void 0)
-], SedesController.prototype, "findOne", null);
-SedesController = __decorate([
-    (0, common_1.Controller)('api/v1/sedes'),
-    __metadata("design:paramtypes", [sedes_service_1.SedesService])
-], SedesController);
-exports.SedesController = SedesController;
-//# sourceMappingURL=sedes.controller.js.map
+], CamarasController.prototype, "findOne", null);
+CamarasController = __decorate([
+    (0, common_1.Controller)('camaras'),
+    __metadata("design:paramtypes", [camaras_service_1.CamarasService])
+], CamarasController);
+exports.CamarasController = CamarasController;
+//# sourceMappingURL=camaras.controller.js.map
